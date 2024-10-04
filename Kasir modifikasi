@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class KasirFinal {
+
+    public static void main(String[] args) {
+      Scanner s= new Scanner(System.in);
+      int pilih, jumlah, total = 0;
+      double harga= 0;
+      do{
+          System.out.println("\nProgram kasir");
+          System.out.println("1.Sandal\n2.Sepatu\n3.tas.");
+          System.out.println("4.selesai");
+          System.out.print("Pilih= ");
+          pilih = s.nextInt();
+          switch(pilih) {
+              case 1:
+                  System.out.println("Sandal");
+                  System.out.println("Harga : 50.000");
+                  System.out.print("Jumlah = ");
+                  jumlah= s.nextInt();
+                  total = 50000*jumlah;
+                  System.out.println("Total : Rp."+total);
+                  harga = harga + total;
+                  break;
+              case 2:
+                  System.out.println("Sepatu");
+                  System.out.println("Harga : 200.000");
+                  System.out.print("Jumlah = ");
+                  jumlah= s.nextInt();
+                  total = 200000*jumlah;
+                  System.out.println("Total : Rp."+total);
+                  harga = harga + total;
+                  break;
+              case 3:
+                  System.out.println("Tas");
+                  System.out.println("Harga : 250.000");
+                  System.out.print("Jumlah = ");
+                  jumlah= s.nextInt();
+                  total = 250000*jumlah;
+                  harga = harga + total;
+              case 4:
+                  System.out.println("Terima kasih..");
+                  break;
+              default: System.out.println("Pilihan Zonk!");
+          }
+      }while(pilih!=4);
+        System.out.println("Grand Total : Rp."+harga);
+    }
+    
+}
